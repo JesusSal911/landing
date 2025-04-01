@@ -10,8 +10,9 @@
   --primary-color: #0078d4;
   --secondary-color: #421d7e;
   --color-fondo: #f3f2f1;
-  --text-color: #333;
+  --text-color: #000000;
   --font-size: 16px;
+  --color-input: #c96c0f;
 }
 body {
   font-family: "Segoe UI", Arial, sans-serif;
@@ -120,6 +121,14 @@ header {
   border-radius: 8px;
   padding: 25px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--primary-color);
 }
 
 .feature-card h3 {
@@ -199,7 +208,7 @@ footer {
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: var(--text-color);
   margin: 10% auto;
   padding: 30px;
   border-radius: 8px;
@@ -208,11 +217,16 @@ footer {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   position: relative;
 }
-
+.modal-content h2 {
+  color: var(--color-fondo);
+  margin: 10px 0;
+}
+.modal-content h2:hover {
+  color: var(--color-input);
+}
 .close {
   color: #aaa;
   position: absolute;
-  top: 15px;
   right: 25px;
   font-size: 28px;
   font-weight: bold;
@@ -220,7 +234,7 @@ footer {
 }
 
 .close:hover {
-  color: #333;
+  color: var(--color-input);
 }
 
 #contactForm {
@@ -230,14 +244,15 @@ footer {
 }
 
 #contactForm input {
+  background-color: var(--text-color);
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 2px solid var(--primary-color);
   border-radius: 4px;
   font-size: 16px;
 }
 
 #contactForm button {
-  background-color: #0078d4;
+  background-color: var(--color-input);
   color: white;
   padding: 12px;
   border: none;
@@ -248,5 +263,5 @@ footer {
 }
 
 #contactForm button:hover {
-  background-color: #005a9e;
+  background-color: #96500a;
 }
