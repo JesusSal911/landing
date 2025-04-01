@@ -6,3 +6,9 @@
   text-decoration: none;
   list-style: none;
 }
+:root {
+  --primary-color: #0078d4;
+  --secondary-color: #421d7e;
+  --text-color: #333;
+  --font-size: 16px;
+}
