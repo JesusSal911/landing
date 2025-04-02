@@ -40,13 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // Guardar en localStorage
     saveToLocalStorage(userData);
 
-    // Mostrar confirmación
-    alert(`¡Gracias ${userData.name}! Tus datos se han guardado.`);
+    // Crear mensaje para WhatsApp
+    const mensaje = `Hola, soy ${userData.name}. Estoy interesado en el juego PAC-MAN Edición 40° Aniversario. ¿Podrían enviarme más información?`;
+    const numeroWhatsApp = "953512111";
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    
+    // Abrir WhatsApp en una nueva pestaña
+    window.open(urlWhatsApp, "_blank");
 
     // Cerrar modal y resetear formulario
     modal.style.display = "none";
     contactForm.reset();
   });
+
 
   // Función para guardar en localStorage
   function saveToLocalStorage(data) {
