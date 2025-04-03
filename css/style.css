@@ -51,12 +51,16 @@ header {
 }
 .iconos {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .fa-regular,
 .fa-solid {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: var(--color-primary);
+}
+.fa-star {
+  color: #ffb900;
+  font-size: 1.5rem;
 }
 /* Hero Section */
 .hero {
@@ -78,6 +82,18 @@ header {
 }
 
 .cta-button {
+  background-color: #1eb31e;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-bottom: 15px;
+}
+.cta-button-compra {
   background-color: #ffb900;
   color: #000;
   border: none;
@@ -87,12 +103,18 @@ header {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s;
+  margin-bottom: 15px;
 }
 
 .cta-button:hover {
+  background-color: #179117;
+}
+.cta-button-compra:hover {
   background-color: #da8927;
 }
-
+.color {
+  background-color: #ffb900;
+}
 /* Features Section */
 .main-content {
   background-color: var(--color-fondo);
@@ -117,7 +139,7 @@ header {
 }
 
 .feature-card {
-  background: white;
+  background: white url("../img/bg_pattern.png") 50% 0 / 76px 76px;
   border-radius: 8px;
   padding: 25px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -147,12 +169,14 @@ header {
 }
 
 .pricing-box {
-  background: white;
+  background: white url("../img/bg_pattern.png") 50% 0 / 76px 76px;
   max-width: 400px;
   padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 .office {
-  background: white;
+  background: white url("../img/bg_pattern.png") 50% 0 / 76px 76px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -165,7 +189,7 @@ header {
   font-size: 2.5rem;
   color: #0078d4;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 5px 0;
 }
 
 .price span {
@@ -265,4 +289,59 @@ footer {
 
 #contactForm button:hover {
   background-color: #96500a;
+}
+
+/* Estilos para la galería de productos */
+.product-gallery {
+  display: flex;
+  gap: 30px;
+  background: white url("../img/fondo-png.png") 50% 0 / 76px 76px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #e1e1e1;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail.active {
+  border-color: var(--primary-color);
+}
+
+.thumbnail:hover {
+  border-color: var(--color-input);
+}
+
+.main-image {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-image img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
 }

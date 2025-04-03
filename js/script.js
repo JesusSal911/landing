@@ -4,6 +4,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeBtn = document.querySelector(".close");
   const contactForm = document.getElementById("contactForm");
   const ctaButtons = document.querySelectorAll(".cta-button");
+  
+  // Galería de imágenes
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  const mainImage = document.querySelector('.main-image img');
+  
+  // Funcionalidad de las miniaturas
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', function() {
+      // Actualizar imagen principal
+      const imgSrc = this.querySelector('img').src;
+      mainImage.src = imgSrc;
+      
+      // Actualizar clase activa
+      thumbnails.forEach(thumb => thumb.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
 
   // Abrir modal al hacer clic en cualquier CTA
   ctaButtons.forEach((button) => {
@@ -47,19 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Abrir WhatsApp en una nueva pestaña
     window.open(urlWhatsApp, "_blank");
-
-    // Cerrar modal y resetear formulario
-    modal.style.display = "none";
-    contactForm.reset();
   });
 
-
   // Función para guardar en localStorage
-  function saveToLocalStorage(data) {
-    let leads = JSON.parse(localStorage.getItem("office365Leads")) || [];
-    leads.push(data);
-    localStorage.setItem("office365Leads", JSON.stringify(leads));
-
-    console.log("Datos guardados:", data); // Para verificar en consola
+  function saveToLocalStorage(userData) {
+    // Obtener datos existentes o inicializar array
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    
+    // Añadir nuevo usuario
+    users.push(userData);
+    
+    // Guardar en localStorage
+    localStorage.setItem("users", JSON.stringify(users));
   }
 });

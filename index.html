@@ -10,6 +10,7 @@
       src="https://kit.fontawesome.com/c6a92522a5.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/typewriter.js"></script>
   </head>
   <body>
     <header>
@@ -37,7 +38,7 @@
     </div>
 
     <section class="hero">
-      <h1>PAC-MAN Edición 40° Aniversario</h1>
+      <h1 id="maquina"></h1>
 
       <!-- Animación de Pac-Man -->
       <div class="pacman-container">
@@ -63,18 +64,53 @@
         gráficos remasterizados, niveles exclusivos y la banda sonora clásica
         que marcó una era.
       </p>
-      <button class="cta-button">¡Jugar ahora!</button>
+      <button class="cta-button color">¡Jugar ahora!</button>
     </section>
 
     <section class="pricing">
-      <div class="game-image">
-        <img src="img/pacman.webp" alt="PAC-MAN Edición Coleccionista" />
+      <div class="product-gallery">
+        <div class="thumbnails">
+          <div class="thumbnail active">
+            <img src="img/pacman.webp" alt="PAC-MAN Vista Principal" />
+          </div>
+          <div class="thumbnail">
+            <img src="img/img1.png" alt="PAC-MAN Vista 2" />
+          </div>
+          <div class="thumbnail">
+            <img src="img/img2.jpg" alt="PAC-MAN Vista 3" />
+          </div>
+          <div class="thumbnail">
+            <img src="img/img3.jpg" alt="PAC-MAN Vista 4" />
+          </div>
+          <div class="thumbnail">
+            <img src="img/img4.jpg" alt="PAC-MAN Vista 5" />
+          </div>
+        </div>
+        <div class="main-image">
+          <img src="img/pacman.webp" alt="PAC-MAN Edición Coleccionista" />
+        </div>
       </div>
       <div class="pricing-box">
         <h2>Oferta Exclusiva</h2>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
         <div class="price">S/15.99 <span>antes S/20.99</span></div>
         <p>Promoción válida hasta agotar stock</p>
-        <button class="cta-button">Añadir al carrito</button>
+        <button class="cta-button">Consulta WhatsApp</button>
+        <button class="cta-button-compra">Añadir al carrito</button>
+        <div>
+          <h3>¿Por qué comprar con nosotros?</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-check"></i> Envío gratis a todo el país
+            </li>
+            <li><i class="fa-solid fa-check"></i> Garantía de satisfacción</li>
+            <li><i class="fa-solid fa-check"></i> Soporte técnico 24/7</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -150,7 +186,7 @@
             id="email"
             placeholder="Correo (Recibirás tu clave)"
           />
-          <button type="submit">Descargar Juego</button>
+          <button type="submit">Conversar por WhatsApp</button>
         </form>
       </div>
     </div>
