@@ -2,7 +2,7 @@
 .pacman-container {
   position: relative;
   height: 60px;
-  margin: 20px auto;
+  margin: 5px auto;
   overflow: hidden;
   width: 100%;
   max-width: 800px;
@@ -34,46 +34,7 @@
   right: 0; /* Posicionamos en el lado derecho para vista de perfil */
 }
 
-.ghost {
-  width: 30px;
-  height: 30px;
-  border-radius: 15px 15px 0 0;
-  position: absolute;
-  top: 15px;
-  animation: moveGhost 20s linear infinite;
-}
 
-.ghost::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background-color: inherit;
-  border-radius: 0 0 5px 5px;
-  clip-path: polygon(0% 0%, 25% 100%, 50% 0%, 75% 100%, 100% 0%);
-}
-
-.ghost-red {
-  background-color: #ff0000;
-  left: 200px;
-}
-
-.ghost-pink {
-  background-color: #ffb8de;
-  left: 350px;
-}
-
-.ghost-blue {
-  background-color: #00ffff;
-  left: 500px;
-}
-
-.ghost-orange {
-  background-color: #ff0606;
-  left: 650px;
-}
 
 .dot {
   width: 8px;
@@ -114,6 +75,30 @@
 }
 .dot:nth-child(12) {
   left: 750px;
+}
+.dot:nth-child(13) {
+  left: 800px;
+}
+.dot:nth-child(14) {
+  left: 850px;
+}
+.dot:nth-child(15) {
+  left: 920px;
+}
+.dot:nth-child(16) {
+  left: 970px;
+}
+.dot:nth-child(17) {
+  left: 1020px;
+}
+.dot:nth-child(18) {
+  left: 1100px;
+}
+.dot:nth-child(19) {
+  left: 1150px;
+}
+.dot:nth-child(20) {
+  left: 1200px;
 }
 
 /* Animaciones */
@@ -171,11 +156,7 @@
     max-width: 90%;
   }
 
-  .ghost-pink,
-  .ghost-blue,
-  .ghost-orange {
-    display: none;
-  }
+
 
   .dot:nth-child(n + 7) {
     display: none;

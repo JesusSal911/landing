@@ -1,0 +1,58 @@
+/* Estilos para la animación de Pac-Man en el footer */
+.footer-pacman {
+  position: relative;
+  height: 40px;
+  margin: 20px auto 0;
+  overflow: hidden;
+  width: 100%;
+  max-width: 80%;
+  background-color: transparent;
+}
+
+.footer-pacman .pacman {
+  width: 20px;
+  height: 20px;
+  background-color: #ffcc00;
+}
+
+.footer-pacman .pacman::before {
+  background-color: #000000;
+}
+
+.footer-pacman .dot {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 6px;
+  height: 6px;
+  top: 21px;
+}
+
+/* Posicionamiento de los puntos en el footer */
+.footer-pacman .dot:nth-child(2) {
+  left: 100px;
+}
+.footer-pacman .dot:nth-child(3) {
+  left: 200px;
+}
+.footer-pacman .dot:nth-child(4) {
+  left: 300px;
+}
+.footer-pacman .dot:nth-child(5) {
+  left: 400px;
+}
+.footer-pacman .dot:nth-child(6) {
+  left: 500px;
+}
+.footer-pacman .dot:nth-child(7) {
+  left: 600px;
+}
+
+/* Responsive para el footer pacman */
+@media (max-width: 768px) {
+  .footer-pacman {
+    max-width: 90%;
+  }
+
+  .footer-pacman .dot:nth-child(n + 5) {
+    display: none;
+  }
+}
